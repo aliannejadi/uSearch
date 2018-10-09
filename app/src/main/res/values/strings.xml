@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">uSearch</string>
+    <string name="query_hint">Enter the query here</string>
+    <string name="button_search">Search</string>
+    <string name="toggle_wlan">WLAN scan</string>
+    <string name="toggle_location">location</string>
+    <string name="toggle_bluetooth">bluetooth</string>
+    <string name="toggle_cell">CELL</string>
+    <string name="toggle_usage">apps usage</string>
+    <string name="toggle_accelerometer">accelerometer</string>
+    <string name="toggle_gyroscope">gyroscope</string>
+    <string name="toggle_temperature">temperature</string>
+    <string name="toggle_light">light</string>
+    <string name="background_switch_label">Background recording</string>
+    <string name="notification_message">Yes? Tap and report it in uSearch.</string>
+    <string name="notification_title">Have you done any new search?</string>
+    <string name="ticker_text">Ticker text</string>
+    <string name="toggle_battery">battery</string>
+    <string name="addTaskButton">Add new task</string>
+    <string name="post_task_questionnaire_title">Post Task Questionnaire</string>
+    <string name="post_q1">I felt hurried or rushed when completing this task</string>
+    <string name="post_q2">It was important to complete this task quickly</string>
+    <string name="post_q3">Overall, I thought this was a difficult task</string>
+    <string name="post_q4">I am satisfied with steps I took to find information</string>
+    <string name="post_q5">I forgot my immediate surroundings during the task</string>
+    <string name="post_q6">I was so involved that I ignored everything around me</string>
+    <string name="post_q7">I was so involved that I lost track of time</string>
+    <string name="post_q8">I was absorbed in my search task</string>
+    <string name="post_q9">I found enough information about the search topic</string>
+    <string name="post_q10">I am satisfied with the information I found</string>
+    <string name="submit_form_button">Submit form</string>
+    <string name="open_the_survey">Open the survey</string>
+    <string name="search_for_something_you_need">Search for something you need</string>
+    <string name="proceed_to_next_task">Submit</string>
+    <string name="show_app_id">GET APP ID</string>
+    <string name="_2_enter_the_query_you_used_to_complete_the_task">2. Enter the query you used to do the task:</string>
+    <string name="_1_select_the_app_you_used_to_complete_the_task">1. Select the app you used to do the task:</string>
+    <string name="search">SEARCH</string>
+</resources>
