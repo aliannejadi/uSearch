@@ -1,14 +1,14 @@
 # uSearch
-uSearch is an Android app aimed for research on Mobile Information Retrieval. Developed at Università della Svizzera italiana (USI), Lugano, Switzerland.
+uSearch is an Android app aimed for research on Mobile Information Retrieval. It has been developed at the Università della Svizzera italiana (USI), Lugano, Switzerland, in collaboration with the Center for Intelligent Information Retrieval (CIIR) at the University of Massachusetts Amherst (UMass), Amherst, MA, USA.
 
 ## Requirements
 
-This application need a [Firebase account](https://firebase.google.com/) to work.
+This application requires a [Firebase account](https://firebase.google.com/) to work.
 
-An account for Crashanalytics is needed for Crash Analytics reporting
+An account for Crashanalytics is required for Crash Analytics reporting
 
 Qualtrics is used for the survey. The link for the questionnaires are in MainActivity (openSurvey).
-TaskBrowserActivity uses an interceptor to know when the user has finished a questionnaire, the url that Qualtrics use might change in the future. 
+TaskBrowserActivity uses an interceptor to know when the user has finished a questionnaire, the url that Qualtrics uses might change in the future. 
 
 ## Usage
 
@@ -31,9 +31,9 @@ In order to run uSearch, follow the steps below:
 
 ## Enable/Disable Sensors
 
-To enable/disable the collection of a sensor the 2 classes to edit are:
+To enable/disable the collection of a sensor the 2 classes to edit are RecordStorageManager and BackgroundRecorder.
 
-* RecordStorageManager.java (Edit this to enable/disable the upload)
+* RecordStorageManager.java (edit this to enable/disable the upload)
 
 Add the constant of the sensor to the array
  
@@ -72,9 +72,8 @@ The design and development of uSearch was in part supported by the RelMobIR proj
 
 Please do feel free to contact us for any questions.
 * Mohammad Aliannejadi: mohammad.alian.nejadi@usi.ch
-* Hamed Zamani: zamani@cs.umass.edu
 
-## Citing
+## Citation
 
 Please cite our CIKM '18 paper if you use uSearch or its components:
 * Mohammad Aliannejadi, Hamed Zamani, Fabio Crestani, W. Bruce Croft. "In Situ and Context-Aware Target Apps Selection  for Unified Mobile Search", In Proc. of CIKM 2018.
