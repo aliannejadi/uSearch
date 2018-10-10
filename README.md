@@ -21,7 +21,7 @@ is routinely uploaded to the cloud (Firebase Storage) for easy access and analys
 
 In order to run uSearch, follow the steps below:
 
-1. Change the project's package name. To do so, follow [this useful post](https://stackoverflow.com/questions/16804093/android-studio-rename-package) on Android Studio.
+1. Change the project's package name. To do so, follow [this useful post](https://stackoverflow.com/questions/16804093/android-studio-rename-package) on Stackoverflow.
 2. Create a new project on Firebase and add the new package name in your project. Note that uSearch uses Firebase "Storage" service.
 3. Create a new bucket on Firebase Storage.
 4. Download "google-services.json" file and add it to the project under: uSearch/app/src
