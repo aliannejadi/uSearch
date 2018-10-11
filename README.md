@@ -50,6 +50,73 @@ To stop the upload of a sensor remove it from both arrays.
 To enable the gathering of a sensor, reach the definition of the runnable __s__ and uncomment the function related to the sensor. 
 To disable simply comment the function of the sensor.
 
+## Modify Sensor/Data Sample Rate
+
+For the majority of the data that uSearch collects, data is collected based on interrupts. However, some of the sensor data such as GPS are still based on polling. Moreover, the data is written to the memory of the phone at a certain rate to clean the phone's RAM. All these rates can be modified in the class named __BackgroundRecorder__. Below you can find pointers to where you can modify sampling rate of the app:
+
+```java 
+    // app usage interval period in milliseconds
+    private final long USAGE_INTERVAL = 1000 * 60 * 60 * 24;
+```
+```java
+    // the sample rate for location recording
+    private long locationRate = 1000 * 60 * 2;
+```
+```java
+    // the sample rate in milliseconds
+    private long sampleRate = 1000 * 60 * 2;
+
+    // the runnable that will be called each sampleRate milliseconds
+    private final Runnable s = new Runnable() {
+
+        @Override
+        public void run() {
+
+            if (keepStalking) {
+
+                Log.i(RRUN, "recording data");
+                recordWLAN();
+                recordCell();
+                recordAccelerometer();
+                recordGyroscope();
+                recordLight();
+                recordBattery();
+                recordScreen();
+
+            }
+
+            h.postDelayed(this, sampleRate);
+
+        }
+
+    };
+ ```
+ ```java
+     // the recording submission rate
+    private final long recordRate = 1000 * 60 * 60 * 1;
+
+    // the runnable that is in charge of submitting the records to Firebase Storage
+    private final Runnable r = new Runnable() {
+
+        @Override
+        public void run() {
+        rsm.uploadRecords(getApplicationContext());
+        h.postDelayed(this, recordRate);
+
+        }
+
+    };
+ ```
+
+## Data Format
+
+All the sensor, interaction, and input data are stored in JSON files and pushed to a Firebase storage bucket. The sampled data are stored in one file per each data type (e.g., location data, battery data, etc.). At every "recordRate", the available data batch is stored in a single file named ```[record type]_records_[timestamp].json```. For example, the location data at timestamp 1539284954 will be stored in a JSON file named ```location_records_1539284954.json```. Every such file is stored under a directory named ```user + [user id]```, where ```user id``` is the phone's unique ID.
+Below is an example JSON file for battery records:
+```json
+{"health":"good","level":23,"plugged":"?","scale":100,"status":"discharging","temperature":333,"timestamp":1523766100661,"voltage":3692
+{"health":"good","level":22,"plugged":"?","scale":100,"status":"discharging","temperature":345,"timestamp":1523766220734,"voltage":3666}
+```
+
 ## Update the Order/Presence of Apps
 
 As the list of apps is different on every device based on the version and build, one may need to define certain apps to appear higher in the app list. Also, certain apps may be system apps and not needed in the list.
