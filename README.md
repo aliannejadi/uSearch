@@ -12,7 +12,7 @@ TaskBrowserActivity uses an interceptor to know when the user has finished a que
 
 ## Usage
 
-This application can be used for task-based or self-report user studies in cross-app mobile search research.
+This application can be used for task-based or self-report user studies in cross-app mobile search research. We have used uSearch to collect a cross-app query log (data available here: [ISTAS](https://github.com/aliannejadi/istas))
  
 Sensors data from participants' smartphones are collected for the duration of a study. The collected data
 is routinely uploaded to the cloud (Firebase Storage) for easy access and analysis.
@@ -143,4 +143,14 @@ Please do feel free to contact us for any questions.
 ## Citation
 
 Please cite our CIKM '18 paper if you use uSearch or its components:
-* Mohammad Aliannejadi, Hamed Zamani, Fabio Crestani, W. Bruce Croft. "In Situ and Context-Aware Target Apps Selection  for Unified Mobile Search", In Proc. of CIKM 2018.
+
+    @inproceedings{AliannejadiCikm18,
+        author    = {Aliannejadi, Mohammad and Zamani, Hamed and Crestani, Fabio and Croft, W. Bruce},
+        title     = {In Situ and Context-Aware Target Apps Selection  for Unified Mobile Search},
+        booktitle = {Proceedings of the 27th {ACM} International Conference on
+             Information and Knowledge Management},
+        series    = {{CIKM '18}},
+        pages     = {1383--1392},
+        location  = {Torino, Italy},          
+        year      = {2018}
+      }
